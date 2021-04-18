@@ -1,18 +1,15 @@
+<%@ page import = "java.io.*,java.util.*, javax.servlet.*" %>
 <html>
-<head><title>First JSP</title></head>
-<body>
-  <%
-    double num = Math.random();
-    if (num > 0.95) {
-  %>
-      <h2>You'll have a luck day!</h2><p>(<%= num %>)</p>
-  <%
-    } else {
-  %>
-      <h2>Well, life goes on ... </h2><p>(<%= num %>)</p>
-  <%
-    }
-  %>
-  <a href="<%= request.getRequestURI() %>"><h3>Try Again</h3></a>
-</body>
+   <head>
+      <title>Display Current Date & Time</title>
+   </head>
+   <body>
+      <center>
+         <h1>Display Current Date & Time</h1>
+      </center>
+      <%
+         Date date = new Date();
+         out.print( "<h2 align = \"center\">" +date.toString()+"</h2>");
+      %>
+   </body>
 </html>
